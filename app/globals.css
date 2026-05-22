@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fafaf5;
+  color: #383026;
+  font-feature-settings: "cv11", "ss01", "ss03";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #e35438;
+  color: #fafaf5;
+}
+
+/* Hide scrollbar during intro */
+.intro-lock {
+  overflow: hidden;
+  height: 100vh;
+}
