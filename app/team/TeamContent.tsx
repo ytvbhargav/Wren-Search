@@ -6,12 +6,11 @@ import { FadeUp, Eyebrow, PageHero, CtaBand } from "@/components/ui";
 const team = [
   {
     name: "Chaz Amidon",
-    title: "Founder & Principal",
+    title: "Founder and Principal",
     location: "Byron Center, Michigan",
     body: [
-      "Chaz has spent fifteen years in corporate recruiting and executive search, including eight years leading executive search at The Mav Group (formerly Palladian West) prior to founding Wren.",
-      "He founded Wren Search with a vision to create more value for clients in the furnishings industry, where he has worked for the past decade.",
-      "Chaz earned his MBA from Loyola University Chicago and his undergraduate degree from Calvin University. He lives in Byron Center, Michigan, with his wife Allie; their three children, Cooper, Isla, and Evangeline; and their bernedoodle, Rocky.",
+      "Chaz has been in corporate recruiting and executive search for a combined 15 years. He founded Wren with a vision to create more value for clients in the furnishings industries, where he has worked for the past decade.",
+      "Chaz led executive search at The Mav Group (formerly Palladian West) for eight years prior to founding Wren. He graduated with his MBA from Loyola University Chicago, with an undergraduate degree from Calvin University. He lives in Byron Center, MI, with his wife, Allie; three children, Cooper, Isla and Evangeline; and his bernedoodle Rocky.",
     ],
   },
   {
@@ -19,9 +18,8 @@ const team = [
     title: "Vice President of Recruiting",
     location: "Wyoming, Michigan",
     body: [
-      "Ashley is a former HR executive with a track record of high-caliber placements across the furnishings industry. Known for her insightful, collaborative approach, she leads searches, client engagements, and the team Wren is building.",
-      "She served as an Executive Recruiter at The Mav Group from 2022 to 2026 and held a variety of HR leadership roles, including at Member First Mortgage and Meijer Credit Union.",
-      "Ashley is a licensed Predictive Index consultant and SHRM-certified. A graduate of Ferris State University, she lives in Wyoming, Michigan, with her husband Matt, their two children Frankie and Marlowe, and their dogs Loki and Sylvie.",
+      "Ashley is a former HR executive with a track record of high-caliber placements in the industry. With a strong passion for the industry, Ashley is known for her insightful, collaborative approach. She leads searches, client engagements, and the team Wren is building.",
+      "Ashley was an Executive Recruiter at The Mav Group (2022-2026) and served in a variety of prior HR leadership roles, including at Member First Mortgage and Meijer Credit Union. She is a licensed Predictive Index consultant and is SHRM-certified. A graduate of Ferris State University, Ashley lives in Wyoming, MI, with her husband, Matt, her two children, Frankie and Marlowe, and her dogs, Loki and Sylvie.",
     ],
   },
 ];

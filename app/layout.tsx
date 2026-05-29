@@ -81,7 +81,7 @@ const orgJsonLd = {
   ],
   contactPoint: {
     "@type": "ContactPoint",
-    email: "hello@wrensearch.com",
+    email: "chaz@wrensearch.com",
     contactType: "Customer service",
   },
 };

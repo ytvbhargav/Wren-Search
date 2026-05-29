@@ -6,31 +6,31 @@ const pillars = [
   {
     n: "01",
     title: "Begin with conversation",
-    body: "Every Wren search starts by understanding the leadership, culture, and business needs behind the role — not just the requisition. We learn the team you're shaping, the problems you're solving, and the kind of leader who can deliver in your environment.",
+    body: "Every Wren search begins with conversation – taking time to understand the leadership, culture, and business needs behind the role. By reducing traditional barriers throughout the search process, we help create a more responsive experience for both clients and candidates.",
     bullets: [
-      "Discovery sessions with hiring leaders and stakeholders",
-      "Calibration of role, scope, and success criteria",
-      "Mapping of organizational context and culture",
+      "Deep understanding of leadership and culture",
+      "Clear view of business needs and role context",
+      "Foundation for meaningful, long-term partnership",
     ],
   },
   {
     n: "02",
     title: "Modern tools, considered judgment",
-    body: "Wren combines industry expertise with AI-assisted sourcing technology to accelerate research, streamline outreach, and identify exceptional talent faster. By reducing traditional barriers, we open broader access to passive leaders who would otherwise remain out of reach.",
+    body: "Wren combines industry expertise with advanced sourcing technology powered by AI to accelerate research, streamline outreach, and identify exceptional talent faster. That means more meaningful conversations, broader access to passive talent, and faster engagement with qualified leaders who may otherwise remain out of reach.",
     bullets: [
-      "AI-assisted research across the design ecosystem",
-      "Discreet outreach to active and passive candidates",
-      "Curated, qualified slate — not a volume play",
+      "Industry expertise paired with AI-assisted sourcing",
+      "Accelerated research across the ecosystem",
+      "Access to exceptional, often passive talent",
     ],
   },
   {
     n: "03",
     title: "Performance Snapshot",
-    body: "Each Wren-backed candidate is presented with a Performance Snapshot — a clear view into how an individual has delivered impact across their career. Rather than rely on résumés alone, you evaluate patterns of performance, leadership, and long-term potential.",
+    body: "Each Wren-backed candidate includes a Performance Snapshot – a clear view of how an individual has delivered impact throughout their career. Rather than relying on résumés alone, we help clients evaluate patterns of performance, leadership, and long-term potential with greater clarity and confidence.",
     bullets: [
-      "Career-spanning view of delivered outcomes",
-      "Leadership patterns and growth trajectory",
-      "Decision-ready summary for stakeholders",
+      "Clear view of delivered impact and patterns",
+      "Leadership and performance trajectory",
+      "Greater clarity and confidence in evaluation",
     ],
   },
 ];
@@ -150,7 +150,7 @@ export default function ApproachContent() {
             <span className="italic text-orange">searches across.</span>
           </>
         }
-        body="From contract furniture and residential furnishings to lighting, architectural products, and hospitality — Wren works across the full design ecosystem."
+        body="Wren maintains long-lasting partnerships across the contract furniture, residential furnishings, commercial lighting, architectural products, hospitality furnishings, architectural design, and more."
         primary={{ href: "/industries", label: "Industries & placements" }}
         secondary={{ href: "/contact", label: "Start a search" }}
       />

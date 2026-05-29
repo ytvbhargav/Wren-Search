@@ -15,8 +15,8 @@ const cols = [
   {
     title: "Connect",
     links: [
-      { href: "mailto:hello@wrensearch.com", label: "hello@wrensearch.com" },
-      { href: "https://www.linkedin.com/company/wren-search", label: "LinkedIn" },
+      { href: "mailto:chaz@wrensearch.com", label: "chaz@wrensearch.com" },
+      { href: "https://www.linkedin.com/company/wrensearch/?viewAsMember=true", label: "LinkedIn" },
     ],
   },
 ];
@@ -62,6 +62,9 @@ export default function Footer() {
           <div style={{ letterSpacing: "0.2em" }} className="uppercase">
             Built on better connections.
           </div>
+          <Link href="/contact" className="text-orange hover:text-eggshell transition-colors duration-500">
+            Start a conversation →
+          </Link>
           <div>
             © {new Date().getFullYear()} Wren Search. All rights reserved.
           </div>

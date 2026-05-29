@@ -100,18 +100,6 @@ export default function HomeContent() {
             </motion.div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.5 }}
-            transition={{ duration: 1.2, delay: 1.4, ease }}
-            className="absolute bottom-10 left-6 md:left-10 text-xs text-brown"
-            style={{ letterSpacing: "0.3em" }}
-          >
-            <div className="flex items-center gap-3">
-              <span className="block h-px w-10 bg-brown" />
-              SCROLL
-            </div>
-          </motion.div>
         </div>
       </section>
 
