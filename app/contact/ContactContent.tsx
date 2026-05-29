@@ -30,10 +30,11 @@ export default function ContactContent() {
   };
 
   const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    if (k === "attachment" && e.target instanceof HTMLInputElement && e.target.files) {
-      setForm((f) => ({ ...f, attachment: e.target.files?.[0] || null }));
+    if (k === "attachment" && e.target instanceof HTMLInputElement) {
+      const target = e.target as HTMLInputElement;
+      setForm((f) => ({ ...f, attachment: target.files?.[0] || null }));
     } else {
-      setForm((f) => ({ ...f, [k]: e.target.value }));
+      setForm((f) => ({ ...f, [k]: (e.target as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement).value }));
     }
   };
 
