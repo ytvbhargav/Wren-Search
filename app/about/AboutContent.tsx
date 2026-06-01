@@ -1,7 +1,40 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
+import { animate, useInView } from "framer-motion";
 import WrenMark from "@/components/WrenMark";
 import { FadeUp, Eyebrow, PageHero, CtaBand } from "@/components/ui";
+
+function CountUp({
+  to,
+  suffix = "",
+  trigger = 0,
+}: {
+  to: number;
+  suffix?: string;
+  trigger?: number;
+}) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
+  const [value, setValue] = useState(0);
+
+  useEffect(() => {
+    if (!inView) return;
+    const controls = animate(0, to, {
+      duration: 1.4,
+      ease: [0.22, 1, 0.36, 1],
+      onUpdate: (v) => setValue(Math.round(v)),
+    });
+    return () => controls.stop();
+  }, [inView, to, trigger]);
+
+  return (
+    <span ref={ref}>
+      {value}
+      {suffix}
+    </span>
+  );
+}
 
 const personality = [
   {
@@ -27,6 +60,8 @@ const personality = [
 ];
 
 export default function AboutContent() {
+  const [rollKey, setRollKey] = useState(0);
+
   return (
     <main className="bg-eggshell text-brown">
       <PageHero
@@ -87,24 +122,32 @@ export default function AboutContent() {
       </section>
 
       {/* Stats */}
-      <section className="py-16 md:py-24 bg-tan/40">
+      <section
+        className="py-16 md:py-24 bg-tan/40"
+        onMouseEnter={() => setRollKey((k) => k + 1)}
+      >
         <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 md:gap-y-0 md:divide-x md:divide-brown/20">
             {[
-              { n: "15+", label: "Years in executive search" },
-              { n: "Retained", label: "Fully retained firm" },
-              { n: "National", label: "Reach across the U.S." },
+              { n: "30+", count: 30, suffix: "+", label: "Years of combined experience in executive search" },
+              { n: "Retained", label: "Traditional & flexible retainer models tailored to your needs" },
+              { n: "International", label: "Reach across the U.S. and Canada" },
               { n: "Long-term", label: "Partnerships, not transactions" },
             ].map((s, i) => (
-              <FadeUp key={s.label} delay={i * 0.08}>
-                <div>
-                  <div className="text-4xl md:text-5xl font-light text-orange">
-                    {s.n}
+              <FadeUp
+                key={s.label}
+                delay={i * 0.08}
+                className="h-full md:px-8 md:first:pl-0 md:last:pr-0"
+              >
+                <div className="flex h-full flex-col">
+                  <div className="text-3xl md:text-4xl font-light text-orange leading-[1.15]">
+                    {s.count != null ? (
+                      <CountUp to={s.count} suffix={s.suffix} trigger={rollKey} />
+                    ) : (
+                      s.n
+                    )}
                   </div>
-                  <div
-                    className="mt-3 text-xs text-brown/70 uppercase"
-                    style={{ letterSpacing: "0.2em" }}
-                  >
+                  <div className="mt-5 text-[0.7rem] text-brown/70 uppercase leading-relaxed tracking-[0.18em]">
                     {s.label}
                   </div>
                 </div>

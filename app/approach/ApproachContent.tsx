@@ -15,10 +15,10 @@ const pillars = [
   },
   {
     n: "02",
-    title: "Modern tools, considered judgment",
-    body: "Wren combines industry expertise with advanced sourcing technology powered by AI to accelerate research, streamline outreach, and identify exceptional talent faster. That means more meaningful conversations, broader access to passive talent, and faster engagement with qualified leaders who may otherwise remain out of reach.",
+    title: "Wren combines industry expertise and established connections",
+    body: "Wren combines industry expertise and established connections with advanced sourcing technology powered by AI to accelerate research, streamline outreach, and identify exceptional talent faster. That means more meaningful conversations, broader access to passive talent, and faster engagement with qualified leaders who may otherwise remain out of reach.",
     bullets: [
-      "Industry expertise paired with AI-assisted sourcing",
+      "Industry expertise and established connections paired with AI-assisted sourcing",
       "Accelerated research across the ecosystem",
       "Access to exceptional, often passive talent",
     ],

@@ -7,7 +7,7 @@ const team = [
   {
     name: "Chaz Amidon",
     title: "Founder and Principal",
-    location: "Byron Center, Michigan",
+    location: "Grand Rapids, Michigan",
     body: [
       "Chaz has been in corporate recruiting and executive search for a combined 15 years. He founded Wren with a vision to create more value for clients in the furnishings industries, where he has worked for the past decade.",
       "Chaz led executive search at The Mav Group (formerly Palladian West) for eight years prior to founding Wren. He graduated with his MBA from Loyola University Chicago, with an undergraduate degree from Calvin University. He lives in Byron Center, MI, with his wife, Allie; three children, Cooper, Isla and Evangeline; and his bernedoodle Rocky.",
@@ -16,10 +16,26 @@ const team = [
   {
     name: "Ashley Myers",
     title: "Vice President of Recruiting",
-    location: "Wyoming, Michigan",
+    location: "Grand Rapids, Michigan",
     body: [
       "Ashley is a former HR executive with a track record of high-caliber placements in the industry. With a strong passion for the industry, Ashley is known for her insightful, collaborative approach. She leads searches, client engagements, and the team Wren is building.",
       "Ashley was an Executive Recruiter at The Mav Group (2022-2026) and served in a variety of prior HR leadership roles, including at Member First Mortgage and Meijer Credit Union. She is a licensed Predictive Index consultant and is SHRM-certified. A graduate of Ferris State University, Ashley lives in Wyoming, MI, with her husband, Matt, her two children, Frankie and Marlowe, and her dogs, Loki and Sylvie.",
+    ],
+  },
+  {
+    name: "Hannah Staal",
+    title: "[Title pending]",
+    location: "Grand Rapids, Michigan",
+    body: [
+      "[Bio coming soon]",
+    ],
+  },
+  {
+    name: "Molly Boeve",
+    title: "[Title pending]",
+    location: "Grand Rapids, Michigan",
+    body: [
+      "[Bio coming soon]",
     ],
   },
 ];

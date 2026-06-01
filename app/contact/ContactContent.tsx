@@ -91,10 +91,10 @@ export default function ContactContent() {
                     Location
                   </div>
                   <p className="text-sm font-light text-brown/85">
-                    Byron Center & Wyoming, Michigan
+                    Grand Rapids, Michigan
                   </p>
                   <p className="text-xs font-light text-brown/60 mt-2">
-                    Working nationally across the U.S.
+                    Serving the U.S. & Canada
                   </p>
                 </div>
 

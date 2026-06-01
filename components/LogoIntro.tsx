@@ -62,10 +62,9 @@ export default function LogoIntro({ onDone }: { onDone: () => void }) {
             initial={{ opacity: 0, y: 6 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 2.0, ease }}
-            className="text-eggshell font-semibold text-base md:text-lg"
-            style={{ letterSpacing: "0.42em", marginLeft: "0.42em" }}
+            className="max-w-[18rem] md:max-w-none text-center text-eggshell font-semibold text-sm md:text-lg tracking-[0.28em] md:tracking-[0.42em] pl-[0.28em] md:pl-[0.42em] leading-relaxed"
           >
-            BUILT&nbsp;ON&nbsp;BETTER&nbsp;CONNECTIONS
+            BUILT ON BETTER CONNECTIONS
           </motion.div>
         </div>
       )}
