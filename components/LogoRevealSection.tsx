@@ -56,7 +56,7 @@ export default function LogoRevealSection() {
                 initial={{ strokeDashoffset: pathLength, strokeDasharray: pathLength }}
                 whileInView={{ strokeDashoffset: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 2.4, delay: 0.35, ease }}
+                transition={{ duration: 1.6, delay: 0.3, ease }}
               />
             </svg>
 
@@ -72,7 +72,7 @@ export default function LogoRevealSection() {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, delay: 2.5, ease }}
+                transition={{ duration: 0.5, delay: 1.8, ease }}
               />
             </svg>
           </div>
@@ -83,7 +83,7 @@ export default function LogoRevealSection() {
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1.2, delay: 3.0, ease }}
+          transition={{ duration: 0.9, delay: 2.2, ease }}
           className="mt-14 h-px w-44 bg-eggshell/30 origin-center"
         />
 
@@ -96,8 +96,8 @@ export default function LogoRevealSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{
-                duration: 0.85,
-                delay: 3.2 + i * 0.12,
+                duration: 0.7,
+                delay: 2.4 + i * 0.1,
                 ease,
               }}
               className={w.italic ? "italic" : ""}
@@ -113,7 +113,7 @@ export default function LogoRevealSection() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1.0, delay: 3.8, ease }}
+          transition={{ duration: 0.8, delay: 2.9, ease }}
           className="mt-10 max-w-md text-sm md:text-base text-eggshell/55 font-light leading-relaxed"
         >
           The wren — small, observant, and built for purpose. A reminder that

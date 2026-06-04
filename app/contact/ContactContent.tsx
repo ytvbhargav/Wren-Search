@@ -1,14 +1,30 @@
 "use client";
 
-import { useState } from "react";
-import Link from "next/link";
-import { FadeUp, CtaBand } from "@/components/ui";
+import { useState, useRef } from "react";
+import { FadeUp } from "@/components/ui";
+
+const FORM_ENDPOINT =
+  "https://script.google.com/macros/s/AKfycbwoeaUXEbVmBwvD7R-NrQjF7Ed9xy02NyylRUz8-ngJGurMDfe6kLrpJn7AIv0AKIkN/exec";
+
+const MAX_FILE_BYTES = 25 * 1024 * 1024; // keep in sync with the Apps Script
 
 const inquiryReasons = [
   "I'm an employer in need of recruiting services",
   "I'm looking to network or find a new role in the industry",
   "Other inquiry",
 ];
+
+/** Reads a File as a base64 data URL (the Apps Script strips the data: prefix). */
+function readFileAsDataUrl(file: File): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(String(reader.result));
+    reader.onerror = () => reject(new Error("Could not read the attachment."));
+    reader.readAsDataURL(file);
+  });
+}
+
+type Status = "idle" | "submitting" | "success" | "error";
 
 export default function ContactContent() {
   const [form, setForm] = useState({
@@ -19,14 +35,77 @@ export default function ContactContent() {
     notes: "",
     attachment: null as File | null,
   });
+  const [status, setStatus] = useState<Status>("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+  const [honeypot, setHoneypot] = useState(""); // bots fill this; humans never see it
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`New inquiry from ${form.name}`);
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\nReason: ${form.reason}\n\nAdditional Notes:\n${form.notes}`,
-    );
-    window.location.href = `mailto:chaz@wrensearch.com?subject=${subject}&body=${body}`;
+    if (status === "submitting") return;
+
+    // Honeypot tripped — pretend success, send nothing.
+    if (honeypot.trim() !== "") {
+      setStatus("success");
+      return;
+    }
+
+    setErrorMsg("");
+
+    if (form.attachment && form.attachment.size > MAX_FILE_BYTES) {
+      setStatus("error");
+      setErrorMsg("Attachment exceeds the 25 MB limit. Please attach a smaller file.");
+      return;
+    }
+
+    setStatus("submitting");
+
+    try {
+      let fileFields: Record<string, string> = {};
+      if (form.attachment) {
+        fileFields = {
+          fileName: form.attachment.name,
+          fileType: form.attachment.type || "application/octet-stream",
+          fileData: await readFileAsDataUrl(form.attachment),
+        };
+      }
+
+      const payload = {
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        reason: form.reason,
+        notes: form.notes,
+        userAgent: typeof navigator !== "undefined" ? navigator.userAgent : "",
+        ...fileFields,
+      };
+
+      const res = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        // text/plain keeps this a "simple" request — no CORS preflight.
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(payload),
+        redirect: "follow",
+      });
+
+      const result = await res
+        .json()
+        .catch(() => ({ result: "error", message: "Unexpected server response." }));
+
+      if (result.result === "success") {
+        setStatus("success");
+        setForm({ name: "", email: "", phone: "", reason: "", notes: "", attachment: null });
+        if (fileInputRef.current) fileInputRef.current.value = "";
+      } else {
+        setStatus("error");
+        setErrorMsg(result.message || "Something went wrong. Please try again.");
+      }
+    } catch {
+      setStatus("error");
+      setErrorMsg(
+        "Network error — please try again, or email us directly at chaz@wrensearch.com.",
+      );
+    }
   };
 
   const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -190,22 +269,70 @@ export default function ContactContent() {
                   <input
                     id="attachment"
                     type="file"
+                    ref={fileInputRef}
                     onChange={set("attachment")}
                     className="w-full text-sm text-brown file:mr-3 file:py-2 file:px-4 file:rounded-full file:border-0 file:bg-orange file:text-eggshell file:font-medium file:cursor-pointer hover:file:bg-brown transition-colors duration-300"
                   />
                 </Field>
 
-                <div className="pt-8">
-                  <button
-                    type="submit"
-                    className="w-full flex items-center justify-center gap-2 bg-orange text-eggshell py-4 text-sm font-medium hover:bg-brown transition-colors duration-500"
-                  >
-                    Send inquiry
-                    <span className="transition-transform duration-500 group-hover:translate-x-1">
-                      →
-                    </span>
-                  </button>
+                {/* Honeypot — visually hidden, catches bots */}
+                <div
+                  className="absolute left-[-9999px] top-0 h-0 w-0 overflow-hidden"
+                  aria-hidden="true"
+                >
+                  <label htmlFor="company-website">Company website</label>
+                  <input
+                    id="company-website"
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={honeypot}
+                    onChange={(e) => setHoneypot(e.target.value)}
+                  />
                 </div>
+
+                {status === "success" ? (
+                  <div className="pt-8" role="status" aria-live="polite">
+                    <div className="border border-orange/40 bg-orange/5 px-6 py-5">
+                      <p className="text-base font-medium text-brown">
+                        Thank you — your inquiry has been received.
+                      </p>
+                      <p className="mt-2 text-sm font-light text-brown/70">
+                        We respond personally, usually within one business day.
+                      </p>
+                      <button
+                        type="button"
+                        onClick={() => setStatus("idle")}
+                        className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-orange hover:text-brown transition-colors duration-500"
+                      >
+                        Send another inquiry
+                        <span>→</span>
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="pt-8 space-y-4">
+                    {status === "error" && (
+                      <p
+                        className="text-sm font-light text-red-700"
+                        role="alert"
+                        aria-live="assertive"
+                      >
+                        {errorMsg}
+                      </p>
+                    )}
+                    <button
+                      type="submit"
+                      disabled={status === "submitting"}
+                      className="group w-full flex items-center justify-center gap-2 bg-orange text-eggshell py-4 text-sm font-medium hover:bg-brown transition-colors duration-500 disabled:opacity-60 disabled:cursor-not-allowed"
+                    >
+                      {status === "submitting" ? "Sending…" : "Send inquiry"}
+                      <span className="transition-transform duration-500 group-hover:translate-x-1">
+                        →
+                      </span>
+                    </button>
+                  </div>
+                )}
 
               </form>
             </FadeUp>
