@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ApproachContent from "./ApproachContent";
 
 export const metadata: Metadata = {
-  title: "Approach",
+  title: "Our Executive Search Approach",
   description:
     "Industry expertise, AI-assisted sourcing, and a relationship-led process. How Wren Search runs every executive search.",
   alternates: { canonical: "/approach" },

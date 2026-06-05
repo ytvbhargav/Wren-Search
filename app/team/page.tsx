@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import TeamContent from "./TeamContent";
 
 export const metadata: Metadata = {
-  title: "Team",
+  title: "Meet Our Executive Search Team",
   description:
     "Meet Wren Search: Chaz Amidon, Founder and Principal, and Ashley Myers, VP of Recruiting — executive search for the furnishings industry.",
   alternates: { canonical: "/team" },

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import AboutContent from "./AboutContent";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About Our Executive Search Firm",
   description:
     "Wren Search blends modern recruiting tools with relationship-led executive search across the contract and residential furnishings industry.",
   alternates: { canonical: "/about" },

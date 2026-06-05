@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import IndustriesContent from "./IndustriesContent";
 
 export const metadata: Metadata = {
-  title: "Industries",
+  title: "Furnishings Industries We Serve",
   description:
     "Executive search in contract furniture, residential furnishings, commercial lighting, architectural products, and hospitality.",
   alternates: { canonical: "/industries" },
