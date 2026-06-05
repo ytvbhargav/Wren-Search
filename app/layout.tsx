@@ -10,16 +10,16 @@ const inter = Inter({
   display: "swap",
 });
 
-const SITE_URL = "https://wrensearch.com";
+const SITE_URL = "https://www.wrensearch.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Wren Search — Executive Search for the Furnishings Industry",
-    template: "%s — Wren Search",
+    default: "Executive Search for the Furnishings Industry | Wren Search",
+    template: "%s | Wren Search",
   },
   description:
-    "Wren Search is an executive search partner for the commercial and residential furnishings industry. Relationship-driven, tech-enabled, grounded in your goals.",
+    "Wren Search is an executive search firm for the commercial and residential furnishings industry. Relationship-driven and tech-enabled.",
   keywords: [
     "executive search",
     "furnishings industry",
@@ -36,7 +36,6 @@ export const metadata: Metadata = {
   authors: [{ name: "Wren Search" }],
   creator: "Wren Search",
   publisher: "Wren Search",
-  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     url: SITE_URL,
@@ -69,6 +68,7 @@ const orgJsonLd = {
   description:
     "Executive search across the commercial and residential furnishings industry.",
   slogan: "Built on better connections.",
+  sameAs: ["https://www.linkedin.com/company/wrensearch/"],
   founder: { "@type": "Person", name: "Chaz Amidon" },
   areaServed: { "@type": "Country", name: "United States" },
   knowsAbout: [

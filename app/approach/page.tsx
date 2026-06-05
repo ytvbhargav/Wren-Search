@@ -4,7 +4,7 @@ import ApproachContent from "./ApproachContent";
 export const metadata: Metadata = {
   title: "Approach",
   description:
-    "Wren Search combines industry expertise with AI-assisted sourcing and a relationship-led process. Every search begins with conversation and includes a Performance Snapshot.",
+    "Industry expertise, AI-assisted sourcing, and a relationship-led process. How Wren Search runs every executive search.",
   alternates: { canonical: "/approach" },
   openGraph: {
     title: "Our Approach — Wren Search",

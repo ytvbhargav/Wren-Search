@@ -4,7 +4,7 @@ import IndustriesContent from "./IndustriesContent";
 export const metadata: Metadata = {
   title: "Industries",
   description:
-    "Executive search across contract furniture, residential furnishings, commercial lighting, architectural products, hospitality, and design firms. Placements from sales to C-suite.",
+    "Executive search in contract furniture, residential furnishings, commercial lighting, architectural products, and hospitality.",
   alternates: { canonical: "/industries" },
   openGraph: {
     title: "Industries — Wren Search",

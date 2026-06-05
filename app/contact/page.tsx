@@ -4,7 +4,7 @@ import ContactContent from "./ContactContent";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Connect with Wren Search to begin a thoughtful executive search across the commercial and residential furnishings industry. Based in Michigan, working nationally.",
+    "Contact Wren Search to start an executive search in the commercial and residential furnishings industry. Based in Michigan, working nationally.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact — Wren Search",

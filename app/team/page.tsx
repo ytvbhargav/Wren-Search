@@ -4,7 +4,7 @@ import TeamContent from "./TeamContent";
 export const metadata: Metadata = {
   title: "Team",
   description:
-    "Meet the people behind Wren Search. Chaz Amidon, Founder and Principal, and Ashley Myers, Vice President of Recruiting — leading executive search across the furnishings industry.",
+    "Meet Wren Search: Chaz Amidon, Founder and Principal, and Ashley Myers, VP of Recruiting — executive search for the furnishings industry.",
   alternates: { canonical: "/team" },
   openGraph: {
     title: "Team — Wren Search",
