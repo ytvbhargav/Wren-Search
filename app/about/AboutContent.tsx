@@ -15,7 +15,7 @@ function CountUp({
   trigger?: number;
 }) {
   const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
+  const inView = useInView(ref, { margin: "-80px" });
   const [value, setValue] = useState(0);
 
   useEffect(() => {
