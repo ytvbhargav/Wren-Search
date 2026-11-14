@@ -4,7 +4,7 @@ const SITE_URL = "https://www.wrensearch.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const routes = ["", "/about", "/approach", "/industries", "/team", "/contact"];
+  const routes = ["", "/about", "/approach", "/industries", "/team", "/jobs", "/contact"];
   return routes.map((r) => ({
     url: `${SITE_URL}${r}`,
     lastModified: now,

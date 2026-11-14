@@ -9,6 +9,8 @@ import { fileURLToPath } from 'url'
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import { Team } from './collections/Team'
+import { Jobs } from './collections/Jobs'
+import { Applications } from './collections/Applications'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -23,7 +25,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname, '..'),
     },
   },
-  collections: [Users, Media, Team],
+  collections: [Users, Media, Team, Jobs, Applications],
   editor: lexicalEditor(),
   db: mongooseAdapter({
     url: process.env.DATABASE_URI || '',
