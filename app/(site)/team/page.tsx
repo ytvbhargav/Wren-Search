@@ -91,6 +91,19 @@ const team: TeamMember[] = [
     "body": [
       "Brooke Strickland joins Wren Search as an Executive Recruiter, bringing a decade of experience as a top-performing sales leader in the commercial architecture and design industry. She is known for building genuine relationships and bringing real market knowledge to every search, enabling her to create partnerships built to last. Brooke is passionate about connecting exceptional talent with the corporations she knows well, giving both clients and candidates a true edge in finding the right fit.\n\nOutside of work, Brooke enjoys going on all sorts of adventures with her husband and two small children from their home base in the Pacific Northwest."
     ]
+  },
+  {
+    "name": "Krista Yetzke",
+    "title": "Sourcing Specialist",
+    "location": "Grand Rapids, Michigan",
+    "email": "krista@wrensearch.com",
+    "image": "/team/Krista.jpg",
+    "focalX": 50,
+    "focalY": 15,
+    "body": [
+      "Krista joins Wren Search as a Sourcing Specialist. Driven by a keen curiosity and the thrill of the hunt, she takes great satisfaction in finding that needle in the haystack, the outlier, the wren. With over a decade of experience sourcing in office furniture and A&D, Krista enjoys working symbiotically with the recruiting team in the search for that perfect fit.",
+      "Outside of sourcing, Krista likes to be outside, fishing with family, foraging, and following any path that allows her to soak in God’s creation."
+    ]
   }
 ];
 
