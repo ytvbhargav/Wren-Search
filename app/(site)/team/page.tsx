@@ -108,7 +108,7 @@ const team: TeamMember[] = [
   {
     "name": "Dominic Samuels",
     "title": "Executive Recruiter",
-    "location": "",
+    "location": "Grand Rapids, Michigan",
     "email": "dominic@wrensearch.com",
     "image": "/team/Dominic.webp",
     "focalX": 50,
