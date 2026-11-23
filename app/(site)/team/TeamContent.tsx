@@ -107,12 +107,14 @@ export default function TeamContent({ team }: { team: TeamMember[] }) {
                       {m.email.toLowerCase()}
                     </a>
                   )}
-                  <div
-                    className="mt-1 text-xs text-brown/55 uppercase"
-                    style={{ letterSpacing: "0.22em" }}
-                  >
-                    {m.location}
-                  </div>
+                  {m.location && (
+                    <div
+                      className="mt-1 text-xs text-brown/55 uppercase"
+                      style={{ letterSpacing: "0.22em" }}
+                    >
+                      {m.location}
+                    </div>
+                  )}
                   <div className="mt-8 space-y-5 text-lg text-brown/80 font-light leading-relaxed">
                     {m.body.map((para, j) => (
                       <p key={j}>{para}</p>

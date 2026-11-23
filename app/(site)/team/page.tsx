@@ -22,12 +22,12 @@ const team: TeamMember[] = [
     "title": "Founder and Principal",
     "location": "Grand Rapids, Michigan",
     "email": "Chaz@wrensearch.com",
-    "image": "/team/Chaz1.jpeg",
+    "image": "/team/Chaz1.webp",
     "focalX": 50,
     "focalY": 30,
     "body": [
-      "Chaz has been in corporate recruiting and executive search for a combined 15 years. He founded Wren with a vision to create more value for clients in the furnishings industries, where he has worked for the past decade.",
-      "Chaz led executive search at The Mav Group (formerly Palladian West) for eight years prior to founding Wren. He graduated with his MBA from Loyola University Chicago, with an undergraduate degree from Calvin University. He lives in Byron Center, MI, with his wife, Allie; three children, Cooper, Isla and Evangeline; and his bernedoodle Rocky."
+      "With 15 combined years in corporate recruiting and executive search, Chaz founded Wren to create more value for clients in the furnishings industries, where he has spent the past decade.",
+      "Before founding Wren, Chaz led executive search at The Mav Group (formerly Palladian West) for eight years. He earned his MBA from Loyola University Chicago and his undergraduate degree from Calvin University. He lives in Byron Center, MI, with his wife, Allie; their three children, Cooper, Isla and Evangeline; and their bernedoodle, Rocky."
     ]
   },
   {
@@ -35,12 +35,12 @@ const team: TeamMember[] = [
     "title": "Vice President of Recruiting",
     "location": "Grand Rapids, Michigan",
     "email": "Ashley@wrensearch.com",
-    "image": "/team/Ashley1.png",
+    "image": "/team/Ashley1.webp",
     "focalX": 50,
     "focalY": 30,
     "body": [
-      "Ashley is a former HR executive with a track record of high-caliber placements in the industry. With a strong passion for the industry, Ashley is known for her insightful, collaborative approach. She leads searches, client engagements, and the team Wren is building.",
-      "Ashley was an Executive Recruiter at The Mav Group (2022-2026) and served in a variety of prior HR leadership roles, including at Member First Mortgage and Meijer Credit Union. She is a licensed Predictive Index consultant and is SHRM-certified. A graduate of Ferris State University, Ashley lives in Wyoming, MI, with her husband, Matt, her two children, Frankie and Marlowe, and her dogs, Loki and Sylvie."
+      "A former HR executive, Ashley has a track record of high-caliber placements in the furnishings industry. She brings an insightful, collaborative approach and real enthusiasm for the work, and she leads searches, client engagements, and the growth of Wren's team.",
+      "Ashley was previously an Executive Recruiter at The Mav Group (2022–2026) and held several HR leadership roles, including at Member First Mortgage and Meijer Credit Union. She is a licensed Predictive Index consultant and SHRM-certified. A Ferris State University graduate, she lives in Wyoming, MI, with her husband, Matt; their two children, Frankie and Marlowe; and their dogs, Loki and Sylvie."
     ]
   },
   {
@@ -48,12 +48,12 @@ const team: TeamMember[] = [
     "title": "Sourcing Manager",
     "location": "Grand Rapids, Michigan",
     "email": "Molly@wrensearch.com",
-    "image": "/team/Molly1.jpg",
+    "image": "/team/Molly1.webp",
     "focalX": 50,
     "focalY": 30,
     "body": [
-      "Molly is an experienced recruiting professional with a passion for connecting talented individuals with opportunities that help them thrive. Her passion for connecting people with opportunities, combined with a strategic and relationship-driven approach, has enabled her to contribute to successful hiring outcomes for both growing organizations and established companies.",
-      "Outside of work, sports have always been a big part of her life. She loves the energy, competition, and lifelong lessons that sports provide, which translate into her recruiting approach."
+      "Molly is an experienced recruiting professional who loves helping talented people find opportunities where they can grow. Pairing strategic thinking with a genuine interest in people, she has contributed to successful hires for both growing organizations and established companies.",
+      "Outside of work, sports have always been a big part of Molly's life. The energy, competition, and lifelong lessons she's taken from them carry straight into how she recruits."
     ]
   },
   {
@@ -61,11 +61,11 @@ const team: TeamMember[] = [
     "title": "Executive Recruiter",
     "location": "Chicago, Illinois",
     "email": "Jeannie@wrensearch.com",
-    "image": "/team/Jeannie.jpeg",
+    "image": "/team/Jeannie.webp",
     "focalX": 50,
     "focalY": 50,
     "body": [
-      "Jeannie Masciola joins Wren Search as an Executive Recruiter with 15 years of experience in consultative sales, business development, and relationship management. Specializing in the residential home furnishings industry, she is passionate about connecting exceptional sales talent with industry-leading organizations. Known for her collaborative, relationship-driven approach, Jeannie builds lasting partnerships and helps clients and candidates achieve long term success. \n\nPrior to joining Wren Search, she held sales leadership and business development roles with leading companies in the luxury beauty, building products and design industries. Outside of work, Jeannie enjoys traveling and spending time with friends and family."
+      "Jeannie Masciola brings 15 years of experience in consultative sales, business development, and relationship management to her role as an Executive Recruiter at Wren Search. Specializing in residential home furnishings, she focuses on matching exceptional sales talent with industry-leading organizations, building durable partnerships that set people up for long-term success. Before Wren, she held sales leadership and business development roles with leading companies in luxury beauty, building products, and design. Outside of work, Jeannie loves to travel and spend time with friends and family."
     ]
   },
   {
@@ -73,11 +73,11 @@ const team: TeamMember[] = [
     "title": "Executive Recruiter",
     "location": "Grand Rapids, Michigan",
     "email": "Lauren@wrensearch.com",
-    "image": "/team/Lauren.png",
+    "image": "/team/Lauren.webp",
     "focalX": 50,
     "focalY": 50,
     "body": [
-      "Lauren is a driven executive recruiter with 6 years of experience connecting top talent with the right opportunities. She holds a bachelor's degree in HR Management and brings a relationship-driven approach and a positive mindset to every search. She is passionate about delivering diverse slates of candidates and finding the best outcomes for both candidates and clients. She believes in elevating others' lives through thoughtful career pathing and helping people find roles where they can truly thrive."
+      "Lauren is a driven executive recruiter with six years of experience matching strong candidates with the right opportunities. She holds a bachelor's degree in HR Management and brings a positive mindset and a personal touch to every search. Lauren is committed to delivering diverse candidate slates and finding outcomes that work for everyone at the table. She believes thoughtful career pathing can elevate people's lives, and she finds meaning in helping them land roles where they can do their best work."
     ]
   },
   {
@@ -85,11 +85,11 @@ const team: TeamMember[] = [
     "title": "Executive Recruiter",
     "location": "Vancouver, Washington",
     "email": "brooke@wrensearch.com",
-    "image": "/team/Brooke.jpeg",
+    "image": "/team/Brooke.webp",
     "focalX": 50,
     "focalY": 50,
     "body": [
-      "Brooke Strickland joins Wren Search as an Executive Recruiter, bringing a decade of experience as a top-performing sales leader in the commercial architecture and design industry. She is known for building genuine relationships and bringing real market knowledge to every search, enabling her to create partnerships built to last. Brooke is passionate about connecting exceptional talent with the corporations she knows well, giving both clients and candidates a true edge in finding the right fit.\n\nOutside of work, Brooke enjoys going on all sorts of adventures with her husband and two small children from their home base in the Pacific Northwest."
+      "After a decade as a top-performing sales leader in commercial architecture and design, Brooke Strickland now brings that experience to Wren Search as an Executive Recruiter. Genuine relationships and real market knowledge shape every search she leads. She takes pride in pairing exceptional talent with the companies she knows well, giving clients and candidates a true edge in finding the right fit. Outside of work, Brooke heads out on all sorts of adventures with her husband and two small children from their home base in the Pacific Northwest."
     ]
   },
   {
@@ -97,12 +97,25 @@ const team: TeamMember[] = [
     "title": "Sourcing Specialist",
     "location": "Grand Rapids, Michigan",
     "email": "krista@wrensearch.com",
-    "image": "/team/Krista.jpg",
+    "image": "/team/Krista.webp",
     "focalX": 50,
     "focalY": 15,
     "body": [
-      "Krista joins Wren Search as a Sourcing Specialist. Driven by a keen curiosity and the thrill of the hunt, she takes great satisfaction in finding that needle in the haystack, the outlier, the wren. With over a decade of experience sourcing in office furniture and A&D, Krista enjoys working symbiotically with the recruiting team in the search for that perfect fit.",
-      "Outside of sourcing, Krista likes to be outside, fishing with family, foraging, and following any path that allows her to soak in God’s creation."
+      "As Wren's Sourcing Specialist, Krista is driven by keen curiosity and the thrill of the hunt. She takes great satisfaction in finding the needle in the haystack: the outlier, the wren. With more than a decade of sourcing experience in office furniture and A&D, she partners closely with the recruiting team in the search for the perfect fit.",
+      "Outside of sourcing, Krista loves being outdoors, whether that's fishing with family, foraging, or following any path that lets her soak in God's creation."
+    ]
+  },
+  {
+    "name": "Dominic Samuels",
+    "title": "Executive Recruiter",
+    "location": "",
+    "email": "dominic@wrensearch.com",
+    "image": "/team/Dominic.webp",
+    "focalX": 50,
+    "focalY": 20,
+    "body": [
+      "After more than 20 years in business development, sales leadership, coaching, and relationship management, Dominic Samuels brings a consultative, listen-first approach to executive search as an Executive Recruiter at Wren. Throughout his career, he has earned a reputation for building trust, understanding what motivates people and organizations, and guiding both through important decisions. He starts every search by learning what matters most, then makes connections that help leaders and organizations succeed.",
+      "Outside of work, Dominic is an avid pilot who loves the challenge of aviation and the constant learning it brings. When he's not flying, he spends his time with his two children, sharing new adventures together."
     ]
   }
 ];
